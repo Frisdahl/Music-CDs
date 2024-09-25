@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+    <title>Music CDs</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <header>
+          <h1>Music CDs</h1>
+        </header>
+
+        <form action="">
+          <div class="input-ctn">
+            <label id="author-label" for="author">Author</label>
+            <input
+              id="author-input"
+              type="text"
+              pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s'-]+$"
+              title="Please enter a valid author name."
+              required
+            />
+          </div>
+
+          <div class="input-ctn">
+            <label id="title-label" for="title">Title</label>
+            <input
+              id="title-input"
+              type="text"
+              pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s'-]+$"
+              title="Please enter a valid author name."
+              required
+            />
+          </div>
+
+          <div class="input-ctn">
+            <label id="year-label" for="year">Year</label>
+            <input
+              id="year-input"
+              type="text"
+              pattern="^[0-9]{4}$"
+              title="Please enter a valid 4-digit year"
+              required
+            />
+          </div>
+          <button type="submit" id="add-btn">Add</button>
+        </form>
+      </section>
+
+      <section class="cd-section">
+        <section class="cd-labels">
+          <p>Author</p>
+          <p>Title</p>
+          <p>Year</p>
+          <p></p>
+        </section>
+
+        <section id="cd-list"></section>
+      </section>
+    </main>
+  </body>
+</html>
